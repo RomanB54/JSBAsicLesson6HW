@@ -22,6 +22,11 @@ describe('Define Boolean value for one word check', () => {
     jest.spyOn(window, 'prompt').mockReturnValue('word word');
     expect(isWord()).toBe('False');
   });
+
+  it('Return false for one word and space', () => {
+    jest.spyOn(window, 'prompt').mockReturnValue('word ');
+    expect(isWord()).toBe('True');
+  });
 });
 
 describe('Raise a to the power x', () => {

@@ -34,9 +34,9 @@ describe('Calculate arithmetic mean', () => {
   });
 
   it('calculate arithmetic mean for 5 to return', () => {
-    jest.spyOn(window, 'prompt').mockReturnValue('5');
+    jest.spyOn(window, 'prompt').mockReturnValue('11');
     const logSpy = jest.spyOn(console, 'log');
     calculateArithmeticMean();
-    expect(logSpy).toHaveBeenCalledWith(3);
+    expect(logSpy).toHaveBeenCalledWith(6);
   });
 });

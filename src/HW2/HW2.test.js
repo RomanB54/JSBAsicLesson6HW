@@ -1,22 +1,16 @@
-import { a, b, result, defineMonth, fitCircleAndSquare } from './HW2';
+import { defineBigger, defineMonth, fitCircleAndSquare } from './HW2';
 
 describe('sum and multiplication a,b', () => {
   afterEach(() => {
     jest.restoreAllMocks();
   });
 
-  it('Check a,b is a number', () => {
-    expect(typeof a).toEqual('number');
-    expect(typeof b).toEqual('number');
-  });
-
   it('console.log shows biggest variable value', () => {
     const logSpy = jest.spyOn(console, 'log');
-    console.log(result);
+    defineBigger(5, 3);
     expect(logSpy).toHaveBeenCalledWith(5);
-    expect(result).toBe(5);
-    expect(result).not.toBe(a);
-    expect(a < b).toBeTruthy();
+    defineBigger(1, 8);
+    expect(logSpy).toHaveBeenCalledWith(8);
   });
 });
 

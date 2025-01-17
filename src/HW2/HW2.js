@@ -1,15 +1,13 @@
 //exercise_1
-export const a = 3;
-export const b = 5;
-export let result;
-
-if (a > b) {
-  result = a;
-} else {
-  result = b;
+export function defineBigger(a, b) {
+  let result;
+  if (a > b) {
+    result = a;
+  } else {
+    result = b;
+  }
+  return console.log(result);
 }
-
-console.log(result);
 
 //exercise_2
 export function defineMonth(userInput) {

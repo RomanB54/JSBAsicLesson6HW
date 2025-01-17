@@ -1,15 +1,11 @@
 export function diff(a, b) {
-  if (a > b) {
-    return a - b;
-  } else {
-    return b - a;
-  }
+  return Math.abs(a - b);
 }
 
 export function isWord() {
   const str = prompt('Please enter a string :');
   const arr = str.split(' ');
-  const len = arr.length;
+  const len = arr.filter(String).length;
   if (len == 1) {
     return 'True';
   } else {

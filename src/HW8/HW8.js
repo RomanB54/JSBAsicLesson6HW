@@ -32,8 +32,8 @@ export function defineDayOfWeek() {
   return dayName;
 }
 //exercise 2
-export function calculateMinutesFromBegin(XDate) {
-  XDate = new Date();
+export function calculateMinutesFromBegin() {
+  const XDate = new Date();
   const result = XDate.getHours() * 60 + XDate.getMinutes();
   return console.log(result);
 }

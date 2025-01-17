@@ -1,14 +1,14 @@
 //exercise_1
-export const a = 3;
-export const b = 5;
-export const sumAB = a + b;
-export const multiplicationAB = a * b;
-console.log(sumAB);
-console.log(multiplicationAB);
+export function calculateSM(a, b) {
+  const sumAB = a + b;
+  const multiplicationAB = a * b;
+  return console.log(multiplicationAB, sumAB);
+}
 //exercise_2
-export const firstStr = '1First';
-export const secondStr = '2Second';
-console.log(firstStr.length + secondStr.length);
+export function calculateLength(first, second) {
+  const sumOfLengths = first.length + second.length;
+  return console.log(sumOfLengths);
+}
 //exercise_3
 export function calculate3Digit() {
   const inputNum = prompt('Enter three-digit number');

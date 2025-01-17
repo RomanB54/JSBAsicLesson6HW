@@ -54,19 +54,16 @@ describe('Calculate minutes from beginning a day', () => {
     jest.restoreAllMocks();
     jest.useRealTimers();
   });
-  const getFakeDate = () => {
-    return Date.now();
-  };
 
   it('Calculate 10 minutes', () => {
     jest.setSystemTime(new Date('2027-11-27T00:10:00'));
-    calculateMinutesFromBegin(getFakeDate());
+    calculateMinutesFromBegin();
     expect(console.log).toHaveBeenCalledWith(10);
   });
 
   it('Calculate 90 minutes', () => {
     jest.setSystemTime(new Date('2027-11-27T01:30:00'));
-    calculateMinutesFromBegin(getFakeDate());
+    calculateMinutesFromBegin();
     expect(console.log).toHaveBeenCalledWith(90);
   });
 });

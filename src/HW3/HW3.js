@@ -1,10 +1,8 @@
 //exercise 1
 export function sum50to100() {
   let sum = 0;
-  let number = 50;
-  while (number <= 100) {
-    sum = sum + number;
-    number++;
+  for (let i = 50; i <= 100; i++) {
+    sum = sum + i;
   }
   return console.log(sum);
 }
@@ -19,18 +17,15 @@ export function showMultiplicationTableOf7() {
   return console.log(output);
 }
 //exercise 3
-export function calculateArithmeticMean() {
-  const N = +prompt('Enter a number N');
-  let mean = 0;
-  let sum = 0;
-  let count = 0;
 
-  for (let i = 1; i <= N; i++) {
-    if (i % 2 != 0) {
-      sum = sum + i;
-      count++;
-    }
+export function calculateArithmeticMean() {
+  const inputNumber = +prompt('Enter a number N');
+  let sum = 0;
+
+  for (let i = 1; i <= inputNumber; i += 2) {
+    sum += i;
   }
-  mean = sum / count;
+
+  const mean = sum / Math.round(inputNumber / 2);
   return console.log(mean);
 }
